@@ -17,13 +17,7 @@ CORS(app, resources={
     }
 })
 
-# Use a newly rotated Azure key here.
-CONNECTION_STRING = os.getenv("AZURE_EVENTHUB_CONNECTION_STRING")
-
-if not CONNECTION_STRING:
-    raise RuntimeError(
-        "AZURE_EVENTHUB_CONNECTION_STRING is not configured."
-    )
+CONNECTION_STRING = "Endpoint=sb://ihsuprodpnres016dednamespace.servicebus.windows.net/;SharedAccessKeyName=iothubowner;SharedAccessKey=+mk2+0LDW4D+i/WE1G6/9sP41m5kWJAexAIoTObd5kE=;EntityPath=iothub-ehub-bharathiot-56245052-1173f97b8c"
 
 CONSUMER_GROUP = "$default"
 
